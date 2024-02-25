@@ -56,6 +56,7 @@ where not exists(
 # 리더보다 높은 연봉을 받는 부서원을 가진 리더의 Id와 이름과 연봉을 알고 싶다.
 # <>는 != 와 같다.
 # any : 단 하나라도 조건에 맞는게 있다면 true
+# some == any
 select E.id, E.name, E.salary
 from department D, employee E
 where D.leader_id = E.id and E.salary < any(
